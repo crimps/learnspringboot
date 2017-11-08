@@ -1,5 +1,7 @@
 package com.crimps.learnspringboot.controller;
 
+import com.crimps.learnspringboot.util.ConstantProperties;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,8 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DestoryWorldController {
 
+    @Autowired
+    ConstantProperties constantProperties;
+
     @RequestMapping("/destory")
     public String index() {
-        return "Destory World !!!";
+        return "Destory World !!!" + constantProperties.getTitle();
     }
 }

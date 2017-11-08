@@ -29,7 +29,7 @@ public class DestoryWorldControllerTest {
     public void getDestory() throws Exception{
         mockMvc.perform(MockMvcRequestBuilders.get("/destory").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(content().string(equalTo("Destory World")));
+                .andExpect(content().string(equalTo("Destory World !!!")));
     }
 
 }
