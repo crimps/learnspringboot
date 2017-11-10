@@ -3,8 +3,9 @@ package com.crimps.learnspringboot.domain;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.Date;
@@ -36,5 +37,18 @@ public class UserRepositoryTest {
     public void testFindByUserName() {
         UserEntity userEntity = userRepository.findByUsername("king");
         System.out.println(userEntity);
+    }
+
+    @Test
+    public void testPageQuery() throws Exception {
+        int page = 1;
+        int size = 10;
+        Pageable pageable = new PageRequest(page, size);
+        userRepository.findByUsername("kk", pageable);
+    }
+
+    @Test
+    public void testmodifyByIdAndUserName() {
+        userRepository.modifyByIdAndUserName("queen", "4d91c54d-429d-4e6d-a55d-02310394b37a");
     }
 }
