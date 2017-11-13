@@ -1,11 +1,14 @@
 package com.crimps.learnspringboot.domain;
 
+import com.crimps.learnspringboot.domain.dto.CountInfo;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.Date;
@@ -50,5 +53,13 @@ public class UserRepositoryTest {
     @Test
     public void testmodifyByIdAndUserName() {
         userRepository.modifyByIdAndUserName("queen", "4d91c54d-429d-4e6d-a55d-02310394b37a");
+    }
+
+    @Test
+    public void testfindCountInfo() {
+        Page<CountInfo> countInfos = userRepository.findCountInfo("queen", new PageRequest(0, 10));
+        for (CountInfo countInfo : countInfos) {
+            System.out.println(countInfo.getBalance());
+        }
     }
 }
