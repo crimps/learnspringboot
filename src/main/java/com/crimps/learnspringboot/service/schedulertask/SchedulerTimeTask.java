@@ -1,4 +1,4 @@
-package com.crimps.learnspringboot.schedulertask;
+package com.crimps.learnspringboot.service.schedulertask;
 
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
