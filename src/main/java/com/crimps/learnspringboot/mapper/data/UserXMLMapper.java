@@ -1,4 +1,4 @@
-package com.crimps.learnspringboot.mapper;
+package com.crimps.learnspringboot.mapper.data;
 
 import com.crimps.learnspringboot.domain.UserEntity;
 

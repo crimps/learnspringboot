@@ -1,6 +1,7 @@
 package com.crimps.learnspringboot.mapper;
 
 import com.crimps.learnspringboot.domain.UserEntity;
+import com.crimps.learnspringboot.mapper.data.UserXMLMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +11,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by crimps on 2017/11/14.

@@ -1,6 +1,7 @@
 package com.crimps.learnspringboot.mapper;
 
 import com.crimps.learnspringboot.domain.UserEntity;
+import com.crimps.learnspringboot.mapper.data.UserMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
